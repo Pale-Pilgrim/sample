@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medicine_categories",
+  "info": {
+    "singularName": "medicine-categorie",
+    "pluralName": "medicine-categories",
+    "displayName": "Medicine_Categorie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CategoryID": {
+      "type": "uid",
+      "required": true
+    },
+    "CategoryName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "StorageRequirements": {
+      "type": "string"
+    },
+    "RequiresPrescription": {
+      "type": "boolean"
+    },
+    "ControlledSubstance": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_medicine_details_meds",
+  "info": {
+    "displayName": "Med"
+  },
+  "options": {},
+  "attributes": {
+    "DosageForm": {
+      "type": "enumeration",
+      "enum": [
+        "Tablet",
+        "Capsule",
+        "Syrup",
+        "Suspension",
+        "Injection",
+        "Cream",
+        "Ointment",
+        "Drops",
+        "Inhaler"
+      ]
+    },
+    "Strength": {
+      "type": "string"
+    },
+    "Manufacturer": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

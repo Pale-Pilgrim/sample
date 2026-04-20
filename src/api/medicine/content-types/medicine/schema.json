@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "medicines",
+  "info": {
+    "singularName": "medicine",
+    "pluralName": "medicines",
+    "displayName": "Medicine"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MedicineID": {
+      "type": "uid",
+      "required": true
+    },
+    "CategoryID": {
+      "type": "uid",
+      "required": true
+    },
+    "BrandName": {
+      "type": "string",
+      "required": false
+    },
+    "GenericName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "DosageForm": {
+      "type": "enumeration",
+      "enum": [
+        "Tablet",
+        "Capsule",
+        "Syrup",
+        "Suspension",
+        "Injection",
+        "Cream",
+        "Ointment",
+        "Drops",
+        "Inhaler"
+      ]
+    },
+    "Manufacturer": {
+      "type": "string"
+    },
+    "Strength": {
+      "type": "string"
+    },
+    "medicine_categorie": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::medicine-categorie.medicine-categorie"
+    },
+    "Meds": {
+      "type": "component",
+      "component": "medicine-details.med",
+      "repeatable": true
+    }
+  }
+}

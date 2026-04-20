@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_order_summary_orders",
+  "info": {
+    "displayName": "Order"
+  },
+  "options": {},
+  "attributes": {
+    "TotalAmount": {
+      "type": "integer"
+    },
+    "PaymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Paid",
+        "Partially Paid",
+        "Cancelled"
+      ]
+    }
+  },
+  "config": {}
+}

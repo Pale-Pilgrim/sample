@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_storage_info_stocks",
+  "info": {
+    "displayName": "Stock"
+  },
+  "options": {},
+  "attributes": {
+    "StorageLocation": {
+      "type": "string"
+    },
+    "StorageRequirements": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

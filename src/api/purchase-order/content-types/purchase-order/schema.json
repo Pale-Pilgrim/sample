@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchase_orders",
+  "info": {
+    "singularName": "purchase-order",
+    "pluralName": "purchase-orders",
+    "displayName": "Purchase_Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OrderID": {
+      "type": "uid",
+      "required": true
+    },
+    "SupplierID": {
+      "type": "uid",
+      "required": true
+    },
+    "OrderDate": {
+      "type": "date"
+    },
+    "TotalAmount": {
+      "type": "integer"
+    },
+    "PaymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Paid",
+        "Partially Paid",
+        "Cancelled"
+      ]
+    },
+    "ReceivedDate": {
+      "type": "date"
+    },
+    "supplier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::supplier.supplier"
+    },
+    "Order": {
+      "type": "component",
+      "component": "order-summary.order",
+      "repeatable": true
+    }
+  }
+}
